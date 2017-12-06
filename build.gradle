@@ -26,16 +26,22 @@ repositories {
 
 dependencies {
 	compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.1')
-//	compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    //DBCP database connection pool
 	compile 'commons-dbcp:commons-dbcp:1.4'
 
 	//DEV-TOOLS
 	runtime('org.springframework.boot:spring-boot-devtools')
 
+    //MYSQL
 	runtime('mysql:mysql-connector-java')
+
+    //LOMBOK
 	compileOnly('org.projectlombok:lombok')
-	providedCompile("org.springframework.boot:spring-boot-starter-tomcat") //为了构建运行在tomcat下的war包，此处设置为providedCompile（仅调试时加载，打包时不加入war中）
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    //Tomcat 为了构建运行在tomcat下的war包，此处设置为providedCompile（仅调试时加载，打包时不加入war中）
+	providedCompile("org.springframework.boot:spring-boot-starter-tomcat")
 
 	// View Engine - Thymeleaf
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
