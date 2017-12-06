@@ -15,6 +15,9 @@ class IndexController {
     @Value(value = "${app.name}") //读取properties配置文件中的属性值
     private String appNme;
 
+    @Value("${spring.profiles.active}")
+    private String profilesActive;
+
     @Autowired
     SysConfig sysConfig;
 
@@ -22,6 +25,7 @@ class IndexController {
     @RequestMapping("/")
     public String index(Model model) {
         model.addAttribute("appNme", appNme);
+        model.addAttribute("profilesActive", profilesActive);
         model.addAttribute("sysConfig", sysConfig);
         return "index";
     }
