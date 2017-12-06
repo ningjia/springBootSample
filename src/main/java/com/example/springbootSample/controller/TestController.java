@@ -30,6 +30,7 @@ public class TestController {
     @RequestMapping("/test")
     @ResponseBody
     String testMethod() {
+        log.info("---testMethod");
         String str = "\nHello World!";
         //输出properties属性值
         str += "\n环境:"+appNme;

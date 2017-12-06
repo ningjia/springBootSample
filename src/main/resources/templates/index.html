@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+springBootSample启动成功
+<!--/*@thymesVar id="name" type="java.lang.String"*/-->
+<p th:text="'当前环境：' + ${appNme} + '!'" >环境信息</p>
+<p th:text="'配置信息->CODE：' + ${sysConfig.code} " >code</p>
+<p th:text="'配置信息->NAME：' + ${sysConfig.name} " >name</p>
+<p th:text="'配置信息->DESC：' + ${sysConfig.desc} " >desc</p>
+</body>
+</html>
