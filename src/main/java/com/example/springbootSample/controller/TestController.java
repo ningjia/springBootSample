@@ -56,7 +56,7 @@ public class TestController {
         str += "\nuser_count="+userList.size();
                 //
         List<User> userList2 = userService.getUserListBySex();
-        String str_users2 = userList.toString();
+        String str_users2 = userList2.toString();
         str += "\nuser2_count="+userList2.size();
         //输出信息
         log.info(str);
