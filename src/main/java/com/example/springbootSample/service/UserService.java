@@ -20,6 +20,6 @@ public interface UserService {
     @Transactional
     public void testTransaction();
 
-    public List<User> getUserListBySex();
+    public List<User> getUserListByPage(int pageNo, int pageSize);
 
 }

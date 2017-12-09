@@ -59,9 +59,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getUserListBySex() {
-        PageHelper.startPage(2,3); // 设置分页，参数1=页数，参数2=每页显示条数
-        List<User> list = userMapper.selectBySex("1");
+    public List<User> getUserListByPage(int pageNo, int pageSize) {
+        PageHelper.startPage(pageNo, pageSize); //设置分页，参数1=页数，参数2=每页显示条数
+        List<User> list = userMapper.selectAll();
         return list;
     }
 
