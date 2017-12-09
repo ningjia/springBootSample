@@ -3,6 +3,7 @@ package com.example.springbootSample.controller;
 import com.example.springbootSample.model.SysConfig;
 import com.example.springbootSample.model.User;
 import com.example.springbootSample.service.UserService;
+import com.github.pagehelper.PageInfo;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -55,9 +56,12 @@ public class TestController {
         String str_users = userList.toString();
         str += "\nuser_count="+userList.size();
                 //
-        List<User> userList2 = userService.getUserListByPage(2,4);
+        List<User> userList2 = userService.getUserListByPage(3,4);
         String str_users2 = userList2.toString();
         str += "\nuser2_count="+userList2.size();
+
+        PageInfo<User> pageInfo = new PageInfo<>(userList2, 0);
+
         //输出信息
         log.info(str);
         return str;

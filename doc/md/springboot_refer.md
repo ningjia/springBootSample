@@ -42,7 +42,8 @@
 ---
 
 ## SpringBoot+Mybatis集成分页插件PageHelper
-
+- @See: https://github.com/pagehelper/Mybatis-PageHelper/tree/master/wikis/zh
+- @See: https://github.com/pagehelper/pagehelper-spring-boot
 ### 1. build.gradle中配置依赖
 ```
 dependencies {
@@ -83,9 +84,9 @@ PageHelper.startPage(1,2);
 userService.fingByName(name);  
 ```
 ### 4. 其他事项
-- PageHelper.startPage(x, y) 只对该语句以后的第一个查询语句得到的数据进行分页。
+- 只有紧跟在PageHelper.startPage方法后的第一个Mybatis的查询（Select）方法会被分页。。
     - 如：有一个查询数据的方法,写在了PageHelper.startPage(x, y)下面，但是这个查询方法里面
 包含两个查询语句的话，该插件就只会对第一个查询语句所查询的数据进行分页。
-
-
-
+- 分页插件不支持带有for update语句的分页。
+- 分页插件不支持嵌套结果映射。
+    - 由于嵌套结果方式会导致结果集被折叠，因此分页查询的结果在折叠后总数会减少，所以无法保证分页结果数量正确。

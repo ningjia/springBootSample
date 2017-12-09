@@ -25,7 +25,10 @@ repositories {
 
 
 dependencies {
+	//Mybatis
 	compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.1')
+
+	//TEST
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.3.RELEASE'
 
     //JDBC
