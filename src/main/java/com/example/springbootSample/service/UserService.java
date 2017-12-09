@@ -20,4 +20,6 @@ public interface UserService {
     @Transactional
     public void testTransaction();
 
+    public List<User> getUserListBySex();
+
 }

@@ -53,6 +53,11 @@ public class TestController {
         //测试mapper中的select操作
         List<User> userList = userService.getUserList();
         String str_users = userList.toString();
+        str += "\nuser_count="+userList.size();
+                //
+        List<User> userList2 = userService.getUserListBySex();
+        String str_users2 = userList.toString();
+        str += "\nuser2_count="+userList2.size();
         //输出信息
         log.info(str);
         return str;
