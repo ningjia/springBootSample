@@ -2,15 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>springBootSample-Index</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
 springBootSample启动成功
-<!--/*@thymesVar id="name" type="java.lang.String"*/-->
-<p th:text="'当前环境：' + ${appNme} + '!'" >环境信息</p>
-<p th:text="'对应配置文件：application-' + ${profilesActive} + '.properties'" >配置文件</p>
-<p th:text="'配置信息->CODE：' + ${sysConfig.code} " >code</p>
-<p th:text="'配置信息->NAME：' + ${sysConfig.name} " >name</p>
-<p th:text="'配置信息->DESC：' + ${sysConfig.desc} " >desc</p>
+    <!--/*@thymesVar id="name" type="java.lang.String"*/-->
+    <hr/>
+    <p><a th:href="@{/loadProperties}" target="_blank">读取properties配置文件</a></p>
+    <hr/>
+    <p><a th:href="@{/test}" target="_blank">执行test()方法</a></p>
 </body>
 </html>

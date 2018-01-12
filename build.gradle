@@ -15,6 +15,11 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war' //指定web项目，项目编译(在项目提示符下执行：gradle build)时生成项目的war包
 
+//用于热部署
+bootRun {
+	addResources = true
+}
+
 group = 'com.example.springbootSample'
 //version = '0.0.1-SNAPSHOT'
 //sourceCompatibility = 1.8

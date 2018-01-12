@@ -24,10 +24,15 @@ class IndexController {
 
     @RequestMapping("/")
     public String index(Model model) {
+        return "index";
+    }
+
+    @RequestMapping("/loadProperties")
+    public String loadProperties(Model model) {
         model.addAttribute("appNme", appNme);
         model.addAttribute("profilesActive", profilesActive);
         model.addAttribute("sysConfig", sysConfig);
-        return "index";
+        return "loadProperties";
     }
 
 }
