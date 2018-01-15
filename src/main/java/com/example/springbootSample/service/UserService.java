@@ -15,7 +15,11 @@ public interface UserService {
 
     public List<User> getUserList();
 
+    public int insertUser(User user);
+
     public int updateUser(User user);
+
+    public int deleteUser(Integer id);
 
     @Transactional
     public void testTransaction();

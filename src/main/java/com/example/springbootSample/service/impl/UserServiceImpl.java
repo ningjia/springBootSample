@@ -34,8 +34,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public int insertUser(User user) {
+        int count = userMapper.insert(user);
+        return count;
+    }
+
+    @Override
     public int updateUser(User user) {
         int count = userMapper.updateByPrimaryKey(user);
+        return count;
+    }
+
+    @Override
+    public int deleteUser(Integer id) {
+        int count = userMapper.deleteByPrimaryKey(id);
         return count;
     }
 

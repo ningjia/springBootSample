@@ -64,18 +64,4 @@ public interface UserMapper {
     })
     int updateByPrimaryKey(User record);
 
-    @Select({
-            "select",
-            "id, username, birthday, sex, address",
-            "from user",
-            "where sex = #{sex,jdbcType=CHAR}"
-    })
-    @Results({
-            @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
-            @Result(column="username", property="username", jdbcType=JdbcType.VARCHAR),
-            @Result(column="birthday", property="birthday", jdbcType=JdbcType.DATE),
-            @Result(column="sex", property="sex", jdbcType=JdbcType.CHAR),
-            @Result(column="address", property="address", jdbcType=JdbcType.VARCHAR)
-    })
-    List<User> selectBySex(String sex);
 }
