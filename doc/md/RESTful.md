@@ -2,10 +2,11 @@
 ### RESTful API具体设计如下
 - 查询用户列表
     - 请求类型：GET
-    - URL：/users
+    - URL：/users/
+    - 需要分页处理时的URL：/users/?pageNo=2&pageSize=3
 - 创建一个用户
     - 请求类型：POST
-    - URL：/users
+    - URL：/users/
 - 根据id查询一个用户
     - 请求类型：GET
     - URL：/users/id

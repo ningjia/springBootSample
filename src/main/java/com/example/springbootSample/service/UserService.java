@@ -13,7 +13,7 @@ public interface UserService {
 
     public User getUser(Integer id);
 
-    public List<User> getUserList();
+    public List<User> getUserList(int pageNo, int pageSize);
 
     public int insertUser(User user);
 

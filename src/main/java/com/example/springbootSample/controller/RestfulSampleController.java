@@ -19,11 +19,14 @@ public class RestfulSampleController {
      *
      * 还可以通过@RequestParam从页面中传递参数来进行查询条件或者翻页信息的传递;
      *
+     * @param pageNo 分页参数：当前页数；可选参数，默认为0；
+     * @param pageSize 分页参数：每页记录数；可选参数，默认为0；
+     *
      * @return
      */
     @GetMapping(value="/") //等同于RequestMapping(method=RequestMethod.GET)
-    public List<User> getUserList() {
-        List<User> users = userService.getUserList();
+    public List<User> getUserList(@RequestParam(value="pageNo",required=false,defaultValue="0") int pageNo, @RequestParam(value="pageSize",required=false,defaultValue="0")  int pageSize) {
+        List<User> users = userService.getUserList(pageNo, pageSize);
         return users;
     }
 

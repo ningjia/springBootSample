@@ -52,7 +52,7 @@ public class TestController {
             str += "\n出现错误（"+e.getMessage()+"），已回滚";
         }
         //测试mapper中的select操作
-        List<User> userList = userService.getUserList();
+        List<User> userList = userService.getUserList(0,0);
         String str_users = userList.toString();
         str += "\nuser_count="+userList.size();
                 //

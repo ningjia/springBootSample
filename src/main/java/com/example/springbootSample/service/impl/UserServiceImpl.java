@@ -28,7 +28,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getUserList() {
+    public List<User> getUserList(int pageNo, int pageSize) {
+        if(pageNo>0 && pageSize>0) {
+            PageHelper.startPage(pageNo, pageSize); //设置分页，参数1=页数，参数2=每页显示条数
+        }
         List<User> list = userMapper.selectAll();
         return list;
     }
