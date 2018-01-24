@@ -17,6 +17,8 @@
     - 请求类型：DELETE
     - URL：/users/id
 ### 单元测试
-RestfulSampleController.test()
+- 单元测试方法：RestfulSampleControllerTest.testUserController()
+- 通过验证断言(mockMvc.andExpect)来判断执行请求后的结果是否满足预期；
+- 通过引入Spring上下文，来避免所测试的对象没有正确完成依赖注入；
 ### Refer
 [Spring Boot构建RESTful API与单元测试](http://blog.didispace.com/springbootrestfulapi/)
