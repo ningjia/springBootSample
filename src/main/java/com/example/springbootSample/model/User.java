@@ -1,16 +1,25 @@
 package com.example.springbootSample.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.Date;
 
+@ApiModel(description="用户对象user")
 public class User {
+    @ApiModelProperty(value="用户ID",name="id",required=true)
     private Integer id;
 
+    @ApiModelProperty(value="用户名",name="username",required=true)
     private String username;
 
+    @ApiModelProperty(value="出生日期",name="birthday")
     private Date birthday;
 
+    @ApiModelProperty(value="性别",name="sex")
     private String sex;
 
+    @ApiModelProperty(value="用户地址",name="address")
     private String address;
 
     public Integer getId() {

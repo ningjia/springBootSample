@@ -8,4 +8,5 @@
 - 实现生成war格式的WEB项目包
 - 集成Mybatis分页插件PageHelper
 - RESTful的API服务和相应的单元测试
+- Swagger2（RESTful API的文档生成与测试）
 ### 各部分的详细说明，请参照/doc/md/*.md
