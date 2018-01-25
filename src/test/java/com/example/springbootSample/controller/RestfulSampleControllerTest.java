@@ -14,6 +14,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.hamcrest.Matchers.equalTo;
@@ -42,6 +43,7 @@ public class RestfulSampleControllerTest {
      * @throws Exception
      */
     @Test
+    @Transactional //测试后数据回滚，避免造成垃圾数据
     public void testUserController() throws Exception {
         RequestBuilder request = null;
 

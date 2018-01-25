@@ -20,5 +20,7 @@
 - 单元测试方法：RestfulSampleControllerTest.testUserController()
 - 通过验证断言(mockMvc.andExpect)来判断执行请求后的结果是否满足预期；
 - 通过引入Spring上下文，来避免所测试的对象没有正确完成依赖注入；
+
 ### Refer
-[Spring Boot构建RESTful API与单元测试](http://blog.didispace.com/springbootrestfulapi/)
+- [Spring Boot构建RESTful API与单元测试](http://blog.didispace.com/springbootrestfulapi/)
+- [Spring Boot使用单元测试](http://tengj.top/2017/12/28/springboot12/) (MockMvc详细说明、断言assertThat语法说明、单元测试回滚)
